@@ -178,7 +178,10 @@ int main() {
 
 			
 			float d = data.d;
-			if (d > 2500) intensity = 0.01;
+			if (d > 2500) {
+				intensity = 0;
+				d = 2500;
+			}
 			
 			float f = d / 2500 * 40;
 			float freq = powf(1.05946f, f);
